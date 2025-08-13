@@ -59,20 +59,28 @@ body {
 }
 
 .main {
-    padding: 100px 100px;
+    padding: 150px 100px;
+    justify-content: space-between;
+    display: flex;
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 4rem;
         font-weight: 700;
         margin-bottom: 20px;
     }
 
     p {
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 400;
         margin-bottom: 15px;
         color: rgb(102, 102, 102);
     }
+}
+
+.button {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .sign-up:hover {
@@ -81,6 +89,7 @@ body {
 }
 
 .get-started {
+    font-size: 1.2rem;
     padding: 10px 15px;
     border-radius: 10px;
     border: none;
@@ -95,16 +104,28 @@ body {
 }
 
 .see-details {
+    font-size: 1.2rem;
     padding: 10px 15px;
     border-radius: 10px;
-    border: none;
+    border-color: rgb(80, 80, 80);
     background-color: rgb(255, 255, 255);
     cursor: pointer;
     color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
 }
 
 .see-details:hover {
     background-color: rgb(87, 87, 87);
     color: rgb(255, 255, 255);
+}
+
+.main img {
+    width: 55%;
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+}
+
+.sec1 {
+    background-color: rgb(231, 231, 231);
 }
