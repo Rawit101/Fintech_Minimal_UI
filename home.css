@@ -1,8 +1,17 @@
+/* -------------------------------------------------
+   Import Google Fonts (Roboto & Lato)
+   ------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+/* รีเซ็ตค่าเริ่มต้นของทุก element */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* สร้าง class สำหรับ font Roboto */
 .roboto {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -12,120 +21,318 @@
         "wdth" 100;
 }
 
+/* class สำหรับ font Lato */
 .lato-regular {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* ฟอนต์หลักทั้งเว็บเป็น Lato */
 body {
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    /* ปิด scroll bar แนวนอน */
 }
 
+/* section หลัก */
+.sec1 {
+    background-color: rgb(235, 235, 235);
+    /* สีพื้นหลัง */
+    min-height: 100vh;
+    /* เต็มความสูงหน้าจอ */
+    display: flex;
+    flex-direction: column;
+    /* จัดเรียงลูกเป็น column */
+}
+
+/* แถบ navbar ด้านบน */
 .navbar {
     display: flex;
     justify-content: space-between;
+    /* แยกซ้าย-ขวา */
     align-items: center;
+    /* จัดให้อยู่กึ่งกลางแนวตั้ง */
     padding: 20px 100px;
+    /* ระยะห่างด้านใน */
 }
 
+/* เมนูภายใน navbar */
 .menu {
     display: flex;
     gap: 20px;
+    /* ระยะห่างแต่ละเมนู */
     text-align: center;
 }
 
-.log-in {
-    border: none;
-    background-color: rgb(255, 255, 255);
+/* item แต่ละตัวในเมนู */
+.menu-item {
     cursor: pointer;
-    margin-right: 10px;
+    /* เปลี่ยนเมาส์เป็นรูปมือเมื่อ hover */
+    padding: 10px;
+    /* เพิ่มพื้นที่ด้านใน */
+    transition: color 0.3s ease;
+    /* ทำเอฟเฟกต์เวลาเปลี่ยนสี */
 }
 
+/* เมื่อ hover บน menu-item */
+.menu-item:hover {
+    color: rgb(255, 255, 255);
+    /* เปลี่ยนเป็นสีขาว */
+}
+
+/* กล่อง register (ปุ่ม Log in / Sign up) */
+.register {
+    display: flex;
+    gap: 10px;
+    /* ระยะห่างระหว่างปุ่ม */
+}
+
+/* ปุ่ม Log in */
+.log-in {
+    border: none;
+    /* ไม่มีเส้นขอบ */
+    background-color: transparent;
+    /* พื้นหลังโปร่งใส */
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover ที่ปุ่ม Log in */
+.log-in:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* พื้นหลังเทาใส */
+    border-radius: 5px;
+    /* มุมโค้งเล็กน้อย */
+}
+
+/* ปุ่ม Sign up */
 .sign-up {
     padding: 10px 15px;
     border-radius: 10px;
     border: none;
     background-color: rgb(36, 36, 36);
+    /* สีพื้นเข้ม */
     cursor: pointer;
     color: rgb(255, 255, 255);
+    /* ตัวหนังสือสีขาว */
+    transition: background-color 0.3s ease;
 }
 
+/* Hover ที่ปุ่ม Sign up */
+.sign-up:hover {
+    background-color: rgb(82, 82, 82);
+    /* พื้นหลังเทาอ่อน */
+}
+
+/* ส่วน Main Content (เนื้อหาหลัก) */
 .main {
-    padding: 150px 100px;
-    justify-content: space-between;
+    flex: 1;
     display: flex;
-
-    h1 {
-        font-size: 4rem;
-        font-weight: 700;
-        margin-bottom: 20px;
-    }
-
-    p {
-        font-size: 1.2rem;
-        font-weight: 400;
-        margin-bottom: 15px;
-        color: rgb(102, 102, 102);
-    }
+    align-items: center;
+    /* จัดกลางแนวตั้ง */
+    justify-content: space-between;
+    /* ซ้าย-ขวา */
+    padding: 0 100px;
+    gap: 50px;
+    /* ระยะห่างระหว่าง text กับรูป */
 }
 
+.main2 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    /* จัดกลางแนวตั้ง */
+    justify-content: space-between;
+    /* ซ้าย-ขวา */
+    padding: 0 100px;
+    gap: 50px;
+    /* ระยะห่างระหว่าง text กับรูป */
+}
+
+/* กล่องข้อความหลัก */
+.main-content {
+    flex: 1;
+    max-width: 50%;
+    /* กว้างสุดไม่เกินครึ่งจอ */
+}
+
+/* หัวข้อใหญ่ */
+.main-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+/* ข้อความคำอธิบาย */
+.main-content p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: rgb(102, 102, 102);
+    line-height: 1.6;
+}
+
+/* กล่องรวมปุ่ม (เช่น Get Started / See Details) */
 .button {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     margin-top: 20px;
 }
 
-.sign-up:hover {
-    background-color: rgb(82, 82, 82);
-    color: rgb(255, 255, 255);
-}
-
+/* ปุ่ม Get Started */
 .get-started {
     font-size: 1.2rem;
-    padding: 10px 15px;
+    padding: 15px 25px;
     border-radius: 10px;
     border: none;
     background-color: rgb(36, 36, 36);
     cursor: pointer;
     color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
 }
 
+/* Hover ปุ่ม Get Started */
 .get-started:hover {
     background-color: rgb(87, 87, 87);
-    color: rgb(255, 255, 255);
 }
 
+/* ปุ่ม See Details */
 .see-details {
     font-size: 1.2rem;
-    padding: 10px 15px;
+    padding: 15px 25px;
     border-radius: 10px;
-    border-color: rgb(80, 80, 80);
-    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(80, 80, 80);
+    background-color: transparent;
     cursor: pointer;
     color: rgb(0, 0, 0);
-
+    transition: all 0.3s ease;
 }
 
+/* Hover ปุ่ม See Details */
 .see-details:hover {
     background-color: rgb(87, 87, 87);
     color: rgb(255, 255, 255);
+    border-color: rgb(87, 87, 87);
 }
 
-.main img {
-    width: 55%;
+/* กล่องรูปภาพ */
+.image-container {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 81px;
+}
+
+
+/* โลโก้ */
+c .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: rgb(36, 36, 36);
+}
+
+/* -------------------------------
+   Responsive Design (จอเล็ก < 768px)
+--------------------------------- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 20px;
+        flex-direction: column;
+        /* เรียงจากบนลงล่าง */
+        gap: 20px;
+    }
+
+    .main {
+        flex-direction: column;
+        /* ซ้อนกันแทนที่จะวางข้างกัน */
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .main-content {
+        max-width: 100%;
+        /* ขยายเต็ม */
+    }
+
+    .main-content h1 {
+        font-size: 2.5rem;
+        /* ลดขนาด font */
+    }
+
+    .image-container {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+    .button {
+        justify-content: center;
+        /* ปุ่มอยู่กึ่งกลาง */
+    }
+}
+
+.box {
+    padding: 100px 10px;
+}
+
+.box-card {
+    width: 30rem;
+    height: 30rem;
+    background-color: #e4e4e4;
+    border-radius: 1.5rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     position: relative;
-    bottom: 100px;
-    left: 100px;
 }
 
-.sec1 {
-    background-color: rgb(231, 231, 231);
+.box-img {
+    display: flex;
+    justify-content: center;
+    padding: 50px 1px;
+}
+
+.box-img img {
+    width: 75%;
+    object-fit: cover;
+}
+
+.content-box {
+    justify-content: center;
+    display: flex;
+}
+
+.box-icon {
+    padding: 20px 1px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-card2 {
+    width: 4rem;
+    height: 3.9rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+}
+
+.box-card2:hover {
+    background-color: #c9c9c9;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.box-content2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: #000000;
+    margin-top: 3px;
 }
