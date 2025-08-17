@@ -146,7 +146,7 @@ body {
     /* จัดกลางแนวตั้ง */
     justify-content: space-between;
     /* ซ้าย-ขวา */
-    padding: 0 100px;
+    padding: 30px 180px;
     gap: 50px;
     /* ระยะห่างระหว่าง text กับรูป */
 }
@@ -247,11 +247,16 @@ c .logo {
         gap: 20px;
     }
 
-    .main {
+    .main,
+    .content2 {
         flex-direction: column;
         /* ซ้อนกันแทนที่จะวางข้างกัน */
         padding: 50px 20px;
         text-align: center;
+    }
+
+    .streamline-content {
+        max-width: 100%;
     }
 
     .main-content {
@@ -335,4 +340,41 @@ c .logo {
     font-size: 1.6rem;
     color: #000000;
     margin-top: 3px;
+}
+
+.content2 {
+    padding: 10px 0;
+    text-align: left;
+    font-size: 1.5rem;
+    justify-content: center;
+}
+
+.content2 p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: rgb(102, 102, 102);
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.chose {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.chose h4 {
+    font-weight: 500;
+
+}
+
+.right {
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+.btn-stream {
+    margin-top: 30px;
 }
