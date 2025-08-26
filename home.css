@@ -390,3 +390,32 @@ c .logo {
 .btn-stream {
     margin-top: 30px;
 }
+
+.get-started a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.main3 {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 100px 100px;
+}
+
+.streamline-content {
+    padding: 10px 0;
+    text-align: left;
+    font-size: 1.5rem;
+    justify-content: center;
+}
+
+.streamline-content p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: rgb(102, 102, 102);
+    line-height: 1.6;
+    margin-top: 20px;
+}

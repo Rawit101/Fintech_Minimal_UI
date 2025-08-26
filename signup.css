@@ -125,6 +125,10 @@ input[type="password"]:focus {
 
 }
 
+input::placeholder {
+    color: rgb(172, 172, 172);
+}
+
 .password p {
     font-size: 0.9rem;
     color: rgb(141, 141, 141);
