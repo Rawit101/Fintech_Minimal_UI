@@ -158,7 +158,7 @@ body {
     /* จัดกลางแนวตั้ง */
     justify-content: space-between;
     /* ซ้าย-ขวา */
-    padding: 30px 180px;
+    padding: 30px 150px;
     gap: 50px;
     /* ระยะห่างระหว่าง text กับรูป */
 }
@@ -401,7 +401,7 @@ c .logo {
     flex: 1;
     justify-content: space-between;
     gap: 50px;
-    padding: 100px 100px;
+    padding: 100px 150px;
 }
 
 .streamline-content {
@@ -418,4 +418,76 @@ c .logo {
     color: rgb(102, 102, 102);
     line-height: 1.6;
     margin-top: 20px;
+}
+
+
+
+.pic3 {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 100px;
+}
+
+.new-feature {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.new-feature h1 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.box-feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.box-feature-card {
+    width: 20rem;
+    height: 13rem;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px;
+    position: relative;
+}
+
+.box-feature-content h2 {
+    padding: 1rem;
+}
+
+.box-feature-content p {
+    padding: 1rem;
+    font-size: 1rem;
+    color: rgb(139, 139, 139);
+}
+
+.arrow {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.ask-ques {
+    padding: 120px 50px;
+    text-align: center;
+}
+
+.ask-ques h1 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.ask-ques p {
+    font-size: 1rem;
+    color: rgb(102, 102, 102);
 }
